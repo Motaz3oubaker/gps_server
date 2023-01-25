@@ -1,0 +1,18 @@
+body { margin: 0; padding: 0; }
+.map { position: absolute; top: 0; bottom: 0; width: 100%; }
+.reset{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    padding: 10px 28px;
+    margin: 35px 10px;
+}
+.reload{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    padding: 10px 28px;
+    margin: 90px 10px;
+}
+
+
