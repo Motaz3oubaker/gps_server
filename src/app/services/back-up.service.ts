@@ -4,15 +4,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class LocationService {
-
+export class BackUpService {
+//url:string ="http://18.195.228.39:8080/";
+url:string =  "http://localhost:8089/BackUp";
   constructor(private http: HttpClient) { }
 
-
-  GetAllPositions(){
-    // return this.http.get("http://18.195.228.39:8080/");
-    
-    return this.http.get("http://localhost:8089/");
+  delete(obj:any){
+    return this.http.post(this.url, obj);
   }
-
+  
 }

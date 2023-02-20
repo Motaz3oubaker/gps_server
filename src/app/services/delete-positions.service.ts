@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DeletePositionsService {
-url:string ="http://3.126.135.135:8080/";
+//url:string ="http://18.195.228.39:8080/";
+url:string =  "http://localhost:8089/";
   constructor(private http: HttpClient) { }
 
   delete(obj:any){

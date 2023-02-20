@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
-import { DeletePositionsService } from './services/delete-positions.service';
-import { LocationService } from './services/location.service';
+import { DeletePositionsService } from '../services/delete-positions.service';
+import { LocationService } from '../services/location.service';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-first-page',
+  templateUrl: './first-page.component.html',
+  styleUrls: ['./first-page.component.css']
 })
-export class AppComponent implements OnInit {
+export class FirstPageComponent implements OnInit {
   title = 'worldmap';
   data_1: any = [];
   map!: mapboxgl.Map;
 
   //style = 'mapbox://styles/mapbox/satellite-streets-v11';
-  style = 'mapbox://stylee/mapbox/streets-v11';
+  //style = 'mapbox://stylee/mapbox/streets-v11';
   //style = 'mapbox://styles/mapbox/dark-v10'
-  //style = 'mapbox://styles/mapbox/light-v10'
+  style = 'mapbox://styles/mapbox/light-v10'
   //style = 'mapbox://styles/mapbox/satellite-streets-v11'
 
   constructor(private LocationService: LocationService, private DeletePositionsService: DeletePositionsService) {
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
       });
     });
     //Controllers
-    this.map.addControl(new mapboxgl.ScaleControl(), "top-right");
+    this.map.addControl(new mapboxgl.ScaleControl(), "top-left");
     this.map.addControl(new mapboxgl.FullscreenControl(), "top-right");
     this.map.addControl(new mapboxgl.NavigationControl(), "top-right");
 
@@ -124,3 +124,6 @@ export class AppComponent implements OnInit {
 
 
 }
+
+
+
